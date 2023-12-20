@@ -1,0 +1,19 @@
+בשאלה הבאה ינתנו שורות קוד, בחר את אלו שיגרמו לשגיאת קומפילציה
+1) 
+  a. const int foo(int num){}
+  b. int const foo(int num){}
+  c. int foo const(int num){}
+  d. int foo(int num) const{}
+  e. int foo(const int num){}
+2) זה משתנה מוגדר length תניח ש
+  a. for(int i = 0; i < length; i++)
+  b. for(;;)
+  c. for(int i = 0;;i++)
+  d. for(int i = 0; i < length;)
+  e. for(i = 0;i < length; i++)
+3) int x = 0; קיים והוגדר ככה  x תניח השמשתנה
+  a. while(x < 8;x++){}
+  b. while(x == '0'){}
+  c. while(x == 'a'-'a'){}
+  d. while(x = 0){}
+  e. while(if(x < 10){}){}
