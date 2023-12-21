@@ -123,15 +123,24 @@ class C : private A{
 }; 
 
 int main(){
+    C* c;
+    C* d = new C(1000, "R");
+    
+    c = new C(*(d));
 
     A a;
     A b;
 
-    C* c = new C(69, "R");
+    a += b;
 
-    c->operator++(a+(2));
+    b.f(a);
 
+    c->operator++(0);
+    d->operator++(1);
+
+    delete d;
     delete c;
 
-    return 1;
+    return 0;
+
 }

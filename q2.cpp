@@ -54,45 +54,85 @@ class D : public B, public C {
         }
 };
 
+//op1
+// int main() {
+//     A a;
+//     B b;
+//     C c;
+//     D d;
+
+//     d.positive();
+//     d.negative();
+
+//     printf("%d\n", a.state());
+//     printf("%d\n", b.state());
+//     printf("%d\n", c.state());
+//     printf("%d\n", d.a);
+
+//     return 0;
+
+// }
+
+//op2
+// int main() {
+//     A a;
+//     B b;
+//     C c;
+//     D d;
+//     for(;d.state() != 3; b.positive()) {
+//         switch(b.state()) {
+//             case 1:
+//                 switch(c.state()) {
+//                     case 1:
+//                         cout << "Good job" << endl;
+//                         break;
+//                     default:
+//                         b.positive();
+//                 }
+//                 c.negative();
+//             case 0:
+//                 c.positive();
+//                 break;
+//             default:
+//                 b.y = 69;
+//         }
+//     }
+
+    // printf("%d\n", a.state());
+    // printf("%d\n", b.state());
+    // printf("%d\n", c.state());
+    // printf("%d\n", d.a);
+
+//     return 0;
+// }
+
+//op3
+// int main() {
+
+//     A a;
+//     B b;
+//     C c;
+//     D d;
+//     if (a.x == 0) {
+//         cout << "===\n" << endl;
+//     }
+//     else if (b.y == 0) {
+//         cout << "Why tho" << endl;
+//     }
+
+    // printf("%d\n", a.state());
+    // printf("%d\n", b.state());
+    // printf("%d\n", c.state());
+    // printf("%d\n", d.a);
+    // return 0;
+// }
+
 int main() {
-    //op 1
-    // d.positive();
-    // d.negative();
-
-    //op 2
-    // for(;d.state() != 3; b.positive()) {
-    //     switch(b.state()) {
-    //         case 1:
-    //             switch(c.state()) {
-    //                 case 1:
-    //                     cout << "Good job" << endl;
-    //                     break;
-    //                 default:
-    //                     b.positive();
-    //             }
-    //             c.negative();
-    //         case 0:
-    //             c.positive();
-    //             break;
-    //         default:
-    //             b.y = 69;
-    //     }
-    // }
-
-    //op 3
-    // if (a.x == 0) {
-    //     cout << "===\n" << endl;
-    // }
-    // else if (b.y == 0) {
-    //     cout << "Why tho" << endl;
-    // }
-
     A a;
     B b;
     C c;
     D d;
 
-    //op 4
     while(true) {
         try {
             if (d.state() == 2) {
@@ -109,9 +149,4 @@ int main() {
         }
     }
 
-    printf("%d\n", a.state());
-    printf("%d\n", b.state());
-    printf("%d\n", c.state());
-    printf("%d\n", d.a);
-    return 0;
 }

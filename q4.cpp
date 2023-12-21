@@ -1,12 +1,10 @@
 class Solution {
-public:
-    int maxProduct(int* nums, int size) {
-        int i = 0;
-        int j;
-        for(int k = 0; k < size;k++)
-        {
-            if(nums[k] > i)
-            {
+    public:
+        int maxProduct(int* nums, int size) {
+            int i = 0;
+            int j;
+            for(int k = 0; k < size;k++) {
+            if(nums[k] > i) {
                 j = i;
                 i = nums[k];
             }
