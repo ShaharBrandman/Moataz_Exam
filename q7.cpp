@@ -1,44 +1,60 @@
 #include <iostream>
+#include <queue>
 
-#include "Queue.h"
+#include "Node.h"
 
-void depthFirstSearch(Queue &q) {
-    if (q == nullptr) {
-        std::cerr << "Queue is null" << std::endl;
-        return;
-    }
-
-    while (!q.isEmpty()) {
-        Node* head = q.popHead();
-
-        if ()
-
-        if (head->left != nullptr) {
-            cout << head->value;
+void breadthFirstSearch(Node* root) {
+        if (root == nullptr) {
+            std::cerr << "Tree is empty" << std::endl;
+            return;
         }
-        else if (head->right != nullptr) {
 
+        std::queue<Node*> q;
+        q.push(root);
+
+        while (!q.empty()) {
+            Node* current = q.front();
+            q.pop();
+
+            std::cout << current->value << std::endl;
+
+            if (current->left != nullptr) {
+                q.push(current->left);
+            }
+
+            if (current->right != nullptr) {
+                q.push(current->right);
+            }
+        }
+}
+
+void depthFirstSearch(Node* binaryTree) {
+    if(binaryTree != nullptr) {
+        std::cout << binaryTree->value << std::endl;
+
+        if (binaryTree->left != nullptr) {
+            depthFirstSearch(binaryTree->left);
+        }
+        if(binaryTree->right != nullptr) {
+            depthFirstSearch(binaryTree->right);
         }
     }
 }
 
 int main() {
-    Node* node1 = new Node(1);
-    Node* node2 = new Node(2);
-    Node* node3 = new Node(3);
-    Node* node4 = new Node(4);
-    Node* node5 = new Node(5);
+    Node* root = new Node(
+        1,
+        new Node(
+            2,
+            new Node(4),
+            new Node(5) 
+        ),
+        new Node(3)
+    );
 
-    node1->left = node2;
-    node1->right = node3;
-    node2->left = node4;
-    node2->right = node5;
-
-    std::cout << "Depth-First Search: ";
-    depthFirstSearch(node1);
-
-    // Cleanup
-    delete node1;
+    breadthFirstSearch(root);
+    
+    delete root;
 
     return 0;
 }
